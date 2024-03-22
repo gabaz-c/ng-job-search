@@ -1,0 +1,15 @@
+:host {
+    display: grid;
+    grid-template-columns: auto 3fr auto;
+    gap: 5px 20px;
+    margin-bottom: 40px;
+}
+
+.job-company-logo {
+    max-width: 50px;
+    max-height: 50px;
+}
+
+.icon-star {
+    vertical-align: middle;
+}
