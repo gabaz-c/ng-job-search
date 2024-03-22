@@ -10,6 +10,11 @@
     max-height: 50px;
 }
 
+.right-container {
+    display: flex;
+    flex-direction: column;
+}
+
 .icon-star {
     vertical-align: middle;
     cursor: pointer;

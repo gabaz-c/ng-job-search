@@ -1,7 +1,9 @@
 <ng-container *ngIf="job">
     <img [src]="job.companyLogo" class="job-company-logo" />
-    <div>
-        <div class="job-title"><strong>{{job.title}}</strong></div>
+    <div class="right-container">
+        <a class="job-title" [routerLink]="['/job', job.id]" routerLinkActive="router-link-active">
+            <strong>{{job.title}}</strong>
+        </a>
         <span>Company: {{job.companyName}} Reference: {{job.reference}}</span>
     </div>
     <span *ngIf="displayStar()" class="icon-star" [id]="'star-' + job.id" (click)="toggleStar(job)"

@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Job } from '../models/job.model';
 import { HttpClient } from '@angular/common/http';
+import { JobDetails } from '../models/job-details.model';
 
 @Injectable({
   providedIn: 'root'
@@ -18,6 +19,10 @@ export class JobService {
 
   getJobs(): Observable<Job[]> {
     return this.httpClient.get<Job[]>('/jobs');
+  }
+
+  getJobDetail(id: number): Observable<JobDetails> {
+    return this.httpClient.get<JobDetails>(`/jobs/${id}`);
   }
 
   addJobToFavorites(job: Job): void {

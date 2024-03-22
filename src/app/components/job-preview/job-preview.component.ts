@@ -2,12 +2,12 @@ import { Component, Input } from '@angular/core';
 import { Job } from '../../models/job.model';
 import { CommonModule } from '@angular/common';
 import { JobService } from '../../services/job.service';
-import { Router } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-job-preview',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterModule],
   templateUrl: './job-preview.component.html',
   styleUrl: './job-preview.component.css'
 })

@@ -1,0 +1,21 @@
+<button (click)="onBackButtonClick()"><i class="fa fa-home back-button-icon"></i>Back</button>
+<ng-container *ngIf="(jobDetails$ | async)  as jobDetails">
+    <section>
+        <div class="details-header-container">
+            <img [src]="jobDetails.companyLogo" class="job-details-company-logo" />
+            <h2 class="details-title">{{jobDetails.companyName}} - {{jobDetails.title}}</h2>
+        </div>
+        <div class="types-list">
+            <div *ngFor="let type of jobDetails.types">{{type}}</div>
+            <div *ngFor="let industry of jobDetails.industries">{{industry}}</div>
+        </div>
+    </section>
+    <section>
+        <ul class="details-bullets">
+            <li><strong>Publish date: </strong>{{jobDetails.publishDate | date : 'dd/MM/yyyy'}}</li>
+            <li><strong>Location: </strong>{{jobDetails.location}}</li>
+            <li><strong>Reference: </strong>{{jobDetails.reference}}</li>
+            <li><strong>Description:</strong><div [innerHTML]="jobDetails.description"></div></li>
+        </ul>
+    </section>
+</ng-container>
