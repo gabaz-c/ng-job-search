@@ -1,0 +1,16 @@
+:host {
+    display: block;
+    width: 60vw;
+    padding: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1 {
+    text-align: center;
+}
+
+.nav-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}

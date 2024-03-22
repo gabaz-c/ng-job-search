@@ -1,0 +1,4 @@
+<ng-container *ngIf="favoriteJobsList.length > 0; else noFavorite">
+    <app-job-preview *ngFor="let job of favoriteJobsList" [job]="job"></app-job-preview>
+</ng-container>
+<ng-template #noFavorite>No favorite selected</ng-template>

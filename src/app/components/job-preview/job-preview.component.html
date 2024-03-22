@@ -1,6 +1,9 @@
-<img [src]="job?.companyLogo" class="job-company-logo" />
-<div>
-    <div class="job-title"><strong>{{job?.title}}</strong></div>
-    <span>Company: {{job?.companyName}} Reference: {{job?.reference}}</span>
-</div>
-<span class="icon-star" [id]="'star-' + job?.id"></span>
+<ng-container *ngIf="job">
+    <img [src]="job.companyLogo" class="job-company-logo" />
+    <div>
+        <div class="job-title"><strong>{{job.title}}</strong></div>
+        <span>Company: {{job.companyName}} Reference: {{job.reference}}</span>
+    </div>
+    <span *ngIf="displayStar()" class="icon-star" [id]="'star-' + job.id" (click)="toggleStar(job)"
+        [ngClass]="{'active': checkIfJobIsFavorite(job)}"></span>
+</ng-container>

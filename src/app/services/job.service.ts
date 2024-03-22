@@ -8,9 +8,23 @@ import { HttpClient } from '@angular/common/http';
 })
 export class JobService {
 
+  private _favoriteJobsList: Job[] = [];
+
   constructor(private httpClient: HttpClient) { }
 
-  public getJobs(): Observable<Job[]> {
+  get favoriteJobsList(): Job[] {
+    return this._favoriteJobsList;
+  }
+
+  getJobs(): Observable<Job[]> {
     return this.httpClient.get<Job[]>('/jobs');
+  }
+
+  addJobToFavorites(job: Job): void {
+    this._favoriteJobsList.push(job);
+  }
+
+  removeJobFromFavorites(job: Job): void {
+    this._favoriteJobsList = this._favoriteJobsList.filter((j) => j.id !== job.id)
   }
 }

@@ -1,7 +1,9 @@
 import { Routes } from '@angular/router';
-import { JobLayoutComponent } from './pages/job-layout/job-layout.component';
+import { JobsAllPageComponent } from './pages/jobs-all-page/jobs-all-page.component';
+import { JobsFavoritesPageComponent } from './pages/jobs-favorites-page/jobs-favorites-page.component';
 
 export const routes: Routes = [
-    { path: 'jobs-list', component: JobLayoutComponent },
-    { path: '', redirectTo: '/jobs-list', pathMatch:'full' }
+    { path: '', redirectTo: 'jobs-all', pathMatch: 'full' },
+    { path: 'jobs-all', component: JobsAllPageComponent },
+    { path: 'jobs-favorites', component: JobsFavoritesPageComponent }
 ];

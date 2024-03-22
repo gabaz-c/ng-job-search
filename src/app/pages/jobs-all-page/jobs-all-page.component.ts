@@ -1,18 +1,18 @@
 import { Component } from '@angular/core';
 import { JobPreviewComponent } from '../../components/job-preview/job-preview.component';
-import { JobService } from '../../services/job.service';
 import { Observable } from 'rxjs';
 import { Job } from '../../models/job.model';
+import { JobService } from '../../services/job.service';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'app-job-layout',
+  selector: 'app-jobs-all-page',
   standalone: true,
   imports: [JobPreviewComponent, CommonModule],
-  templateUrl: './job-layout.component.html',
-  styleUrl: './job-layout.component.css'
+  templateUrl: './jobs-all-page.component.html',
+  styleUrl: './jobs-all-page.component.css'
 })
-export class JobLayoutComponent {
+export class JobsAllPageComponent {
   public jobsList$!: Observable<Job[]>;
   constructor(private jobService: JobService) {
     this.getJobs();

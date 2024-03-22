@@ -12,4 +12,9 @@
 
 .icon-star {
     vertical-align: middle;
+    cursor: pointer;
+}
+
+.icon-star.active {
+    color: yellow;
 }
