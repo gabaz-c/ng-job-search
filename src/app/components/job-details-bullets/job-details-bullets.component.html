@@ -1,0 +1,10 @@
+<ng-container *ngIf="jobDetails">
+    <ul class="details-bullets">
+        <li><strong>Publish date: </strong>{{jobDetails.publishDate | date : 'dd/MM/yyyy'}}</li>
+        <li><strong>Location: </strong>{{jobDetails.location}}</li>
+        <li><strong>Reference: </strong>{{jobDetails.reference}}</li>
+        <li><strong>Description:</strong>
+            <div [innerHTML]="jobDetails.description"></div>
+        </li>
+    </ul>
+</ng-container>

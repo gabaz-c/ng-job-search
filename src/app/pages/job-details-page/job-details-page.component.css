@@ -1,28 +1,4 @@
-.details-header-container{
-    display: flex;
-    flex-direction: row;
-}
 
-.details-title{
-    align-self: center;
-}
-
-.job-details-company-logo{
-    max-width: 80px;
-    max-height: 80px;
-}
-
-.types-list {
-    display: flex;
-    flex-direction: row;
-    gap: 16px;
-}
-
-.details-bullets {
-    list-style: none;
-    padding: 0;
-    margin-left: 0;
-}
 
 .back-button-icon {
     margin-right: 8px;

@@ -1,0 +1,8 @@
+<ng-container *ngIf="jobDetails">
+        <img [src]="jobDetails.companyLogo" class="job-details-company-logo" />
+        <h2 class="details-title">{{jobDetails.companyName}} - {{jobDetails.title}}</h2>
+    <div class="types-list">
+        <app-detail-chip *ngFor="let type of jobDetails.types" [chipText]="type"></app-detail-chip>
+        <app-detail-chip *ngFor="let industry of jobDetails.industries" [chipText]="industry"></app-detail-chip>
+    </div>
+</ng-container>
